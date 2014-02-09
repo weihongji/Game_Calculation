@@ -41,7 +41,7 @@
             this.txtUserAnswers = new System.Windows.Forms.TextBox();
             this.txtCalculations = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblScore = new System.Windows.Forms.TextBox();
+            this.lblScore = new System.Windows.Forms.Label();
             this.btnSeeAnswers = new System.Windows.Forms.Button();
             this.txtAnswers = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -191,13 +191,13 @@
             // 
             // lblScore
             // 
-            this.lblScore.BackColor = System.Drawing.SystemColors.Control;
-            this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblScore.Location = new System.Drawing.Point(77, 200);
-            this.lblScore.Multiline = true;
+            this.lblScore.Location = new System.Drawing.Point(73, 213);
+            this.lblScore.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(165, 84);
+            this.lblScore.Size = new System.Drawing.Size(169, 60);
             this.lblScore.TabIndex = 2;
             this.lblScore.Text = "你得了{0}分，\r\n错的有点多，需要努力啊！";
             // 
@@ -263,7 +263,7 @@
         private System.Windows.Forms.Button btnSeeAnswers;
         private System.Windows.Forms.TextBox txtUserAnswers;
         private System.Windows.Forms.TextBox txtAnswers;
-        private System.Windows.Forms.TextBox lblScore;
+        private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbRange;
     }
