@@ -11,6 +11,8 @@ namespace Calculation
         public int Bottom { get; set; }
         public int Top { get; set; }
 
+        private const double ZERO = 0.2;
+
         public Generator()
             : this(1, 100)
         {
@@ -48,6 +50,13 @@ namespace Calculation
                 {
                     continue;
                 }
+                if (calculation.Left == 0 || calculation.Right == 0)
+                {
+                    if (additions.Count(x => x.Left == 0 || x.Right == 0) >= ZERO * count)
+                    {
+                        continue;
+                    }
+                }
                 var s = calculation.ToString();
                 if (additions.All(x => x.ToString() != s))
                 {
@@ -82,6 +91,13 @@ namespace Calculation
                 if (calculation.Left == 0 && calculation.Right == 0)
                 {
                     continue;
+                }
+                if (calculation.Left == 0 || calculation.Right == 0)
+                {
+                    if (subtractions.Count(x => x.Left == 0 || x.Right == 0) >= ZERO * count)
+                    {
+                        continue;
+                    }
                 }
                 var s = calculation.ToString();
                 if (subtractions.All(x => x.ToString() != s))
