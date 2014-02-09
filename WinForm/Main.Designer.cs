@@ -36,13 +36,13 @@
             this.rdoAll = new System.Windows.Forms.RadioButton();
             this.rdoSubtract = new System.Windows.Forms.RadioButton();
             this.rdoAdd = new System.Windows.Forms.RadioButton();
-            this.btnGenerate = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCalculations = new System.Windows.Forms.TextBox();
             this.txtUserAnswers = new System.Windows.Forms.TextBox();
             this.txtAnswers = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblScore = new System.Windows.Forms.Label();
+            this.btnGenerate = new System.Windows.Forms.Button();
             this.btnSeeAnswers = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(472, 79);
+            this.panel1.Size = new System.Drawing.Size(484, 79);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
@@ -131,17 +131,6 @@
             this.rdoAdd.Text = "加法";
             this.rdoAdd.UseVisualStyleBackColor = true;
             // 
-            // btnGenerate
-            // 
-            this.btnGenerate.Font = new System.Drawing.Font("SimSun", 20F);
-            this.btnGenerate.Location = new System.Drawing.Point(18, 12);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(151, 46);
-            this.btnGenerate.TabIndex = 1;
-            this.btnGenerate.Text = "出题";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtCalculations);
@@ -150,7 +139,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 79);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 356);
+            this.panel2.Size = new System.Drawing.Size(280, 383);
             this.panel2.TabIndex = 1;
             // 
             // txtCalculations
@@ -162,17 +151,17 @@
             this.txtCalculations.Multiline = true;
             this.txtCalculations.Name = "txtCalculations";
             this.txtCalculations.ReadOnly = true;
-            this.txtCalculations.Size = new System.Drawing.Size(149, 356);
+            this.txtCalculations.Size = new System.Drawing.Size(154, 383);
             this.txtCalculations.TabIndex = 1;
             // 
             // txtUserAnswers
             // 
             this.txtUserAnswers.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtUserAnswers.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtUserAnswers.Location = new System.Drawing.Point(149, 0);
+            this.txtUserAnswers.Location = new System.Drawing.Point(154, 0);
             this.txtUserAnswers.Multiline = true;
             this.txtUserAnswers.Name = "txtUserAnswers";
-            this.txtUserAnswers.Size = new System.Drawing.Size(69, 356);
+            this.txtUserAnswers.Size = new System.Drawing.Size(69, 383);
             this.txtUserAnswers.TabIndex = 2;
             this.txtUserAnswers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserAnswers_KeyPress);
             this.txtUserAnswers.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUserAnswers_KeyUp);
@@ -182,11 +171,11 @@
             this.txtAnswers.BackColor = System.Drawing.SystemColors.Control;
             this.txtAnswers.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtAnswers.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtAnswers.Location = new System.Drawing.Point(218, 0);
+            this.txtAnswers.Location = new System.Drawing.Point(223, 0);
             this.txtAnswers.Multiline = true;
             this.txtAnswers.Name = "txtAnswers";
             this.txtAnswers.ReadOnly = true;
-            this.txtAnswers.Size = new System.Drawing.Size(57, 356);
+            this.txtAnswers.Size = new System.Drawing.Size(57, 383);
             this.txtAnswers.TabIndex = 3;
             // 
             // panel3
@@ -195,9 +184,9 @@
             this.panel3.Controls.Add(this.btnGenerate);
             this.panel3.Controls.Add(this.btnSeeAnswers);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(275, 79);
+            this.panel3.Location = new System.Drawing.Point(280, 79);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(197, 356);
+            this.panel3.Size = new System.Drawing.Size(204, 383);
             this.panel3.TabIndex = 2;
             // 
             // lblScore
@@ -205,19 +194,30 @@
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblScore.Location = new System.Drawing.Point(14, 213);
+            this.lblScore.Location = new System.Drawing.Point(13, 198);
             this.lblScore.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(169, 60);
             this.lblScore.TabIndex = 2;
             this.lblScore.Text = "你得了{0}分，\r\n错的有点多，需要努力啊！";
             // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Font = new System.Drawing.Font("SimSun", 20F);
+            this.btnGenerate.Location = new System.Drawing.Point(18, 8);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(142, 46);
+            this.btnGenerate.TabIndex = 1;
+            this.btnGenerate.Text = "出题";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
             // btnSeeAnswers
             // 
             this.btnSeeAnswers.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSeeAnswers.Location = new System.Drawing.Point(18, 100);
+            this.btnSeeAnswers.Location = new System.Drawing.Point(18, 77);
             this.btnSeeAnswers.Name = "btnSeeAnswers";
-            this.btnSeeAnswers.Size = new System.Drawing.Size(151, 82);
+            this.btnSeeAnswers.Size = new System.Drawing.Size(142, 71);
             this.btnSeeAnswers.TabIndex = 1;
             this.btnSeeAnswers.Text = "看结果";
             this.btnSeeAnswers.UseVisualStyleBackColor = true;
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 435);
+            this.ClientSize = new System.Drawing.Size(484, 462);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
