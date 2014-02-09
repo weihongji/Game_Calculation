@@ -44,6 +44,10 @@ namespace Calculation
                     Left = left,
                     Right = result - left
                 };
+                if (calculation.Left == 0 && calculation.Right == 0)
+                {
+                    continue;
+                }
                 var s = calculation.ToString();
                 if (additions.All(x => x.ToString() != s))
                 {

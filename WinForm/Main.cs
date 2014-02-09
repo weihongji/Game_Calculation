@@ -51,7 +51,7 @@ namespace Calculation
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            var core = new Generator(GetNumberFromConfig("rangeBottom", 0), GetSafeNumber(this.cmbRange.SelectedItem.ToString(), 10));
+            var core = new Generator(GetNumberFromConfig("rangeBottom", 0), GetSafeNumber(this.cmbRange.Text, 10));
             if (this.rdoAdd.Checked)
             {
                 this.Calculations = core.GetAdditions(COUNT);
@@ -121,7 +121,7 @@ namespace Calculation
             var score = corrects * 100 / this.Calculations.Count;
             if (score == 100)
             {
-                comment = "满分^_^";
+                comment = "太棒了，满分^_^";
             }
             else if (score >= 90)
             {
@@ -141,7 +141,7 @@ namespace Calculation
             }
             else if (score > 0)
             {
-                comment = "不及格，小朋友表现不好哦:(";
+                comment = "表现不好哦:(";
             }
             else
             {
@@ -178,6 +178,21 @@ namespace Calculation
                 {
                     btnSeeAnswers_Click(null, null);
                     e.Handled = true;
+                    return;
+                }
+            }
+            // Enter at the last answer
+            if (e.KeyChar == '\r' || e.KeyChar == '\n')
+            {
+                var enterCount = this.txtUserAnswers.Text.Count(x => x == '\n');
+                if (enterCount == this.COUNT - 1)
+                {
+                    if (this.txtUserAnswers.Text.LastIndexOf('\n') < this.txtUserAnswers.SelectionStart)
+                    {
+                        btnSeeAnswers_Click(null, null);
+                        e.Handled = true;
+                        return;
+                    }
                 }
             }
         }
