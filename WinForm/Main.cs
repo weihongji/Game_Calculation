@@ -67,7 +67,7 @@ namespace Calculation
                 var random = new Random();
                 var numbers = Enumerable.Range(0, COUNT * 2);
                 var shuffle = numbers.OrderBy(a => random.NextDouble());
-                this.Calculations.Clear();
+                this.Calculations = new List<Calculation>();
                 foreach (var n in shuffle)
                 {
                     this.Calculations.Add(calculations[n]);
@@ -76,6 +76,7 @@ namespace Calculation
                         break;
                     }
                 }
+                this.OnCalculationsChanged();
             }
 
             this.txtCalculations.Text = "";
@@ -222,6 +223,14 @@ namespace Calculation
                 this.txtUserAnswers.Text = text;
                 this.txtUserAnswers.SelectionStart = cursorPosition;
                 this.txtUserAnswers.SelectionLength = 0;
+            }
+        }
+
+        private void cmbRange_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnGenerate_Click(null, null);
             }
         }
 

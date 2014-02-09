@@ -84,6 +84,7 @@
             this.cmbRange.Name = "cmbRange";
             this.cmbRange.Size = new System.Drawing.Size(100, 28);
             this.cmbRange.TabIndex = 0;
+            this.cmbRange.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cmbRange_KeyUp);
             // 
             // groupType
             // 

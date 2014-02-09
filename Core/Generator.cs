@@ -79,6 +79,10 @@ namespace Calculation
                     Left = left,
                     Right = right
                 };
+                if (calculation.Left == 0 && calculation.Right == 0)
+                {
+                    continue;
+                }
                 var s = calculation.ToString();
                 if (subtractions.All(x => x.ToString() != s))
                 {
