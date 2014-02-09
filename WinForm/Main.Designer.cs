@@ -153,6 +153,7 @@
             this.txtCalculations.ReadOnly = true;
             this.txtCalculations.Size = new System.Drawing.Size(158, 348);
             this.txtCalculations.TabIndex = 1;
+            this.txtCalculations.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtUserAnswers
             // 
@@ -180,6 +181,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackgroundImage = global::Calculation.Properties.Resources._19;
             this.panel3.Controls.Add(this.lblScore);
             this.panel3.Controls.Add(this.btnGenerate);
             this.panel3.Controls.Add(this.btnSeeAnswers);
