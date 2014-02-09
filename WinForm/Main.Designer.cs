@@ -181,7 +181,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackgroundImage = global::Calculation.Properties.Resources._19;
+            this.panel3.BackgroundImage = global::Calculation.Properties.Resources._24;
             this.panel3.Controls.Add(this.lblScore);
             this.panel3.Controls.Add(this.btnGenerate);
             this.panel3.Controls.Add(this.btnSeeAnswers);

@@ -45,6 +45,14 @@ namespace Calculation
             this.COUNT = GetNumberFromConfig("count", 10);
             this.lblScore.Visible = false;
             this.cmbRange.SelectedIndex = GetNumberFromConfig("rangeTop", 10) == 10 ? 0 : 1;
+            if (GetNumberFromConfig("background", 19) == 24)
+            {
+                this.panel3.BackgroundImage = Properties.Resources._24;
+            }
+            else
+            {
+                this.panel3.BackgroundImage = Properties.Resources._19;
+            }
             this.OnCalculationsChanged = Calculations_Changed;
             this.OnCalculationsChanged();
         }
@@ -151,7 +159,14 @@ namespace Calculation
             Color color;
             if (score >= 80)
             {
-                color = Color.Green;
+                if (GetNumberFromConfig("background", 19) == 24)
+                {
+                    color = Color.White;
+                }
+                else
+                {
+                    color = Color.Green;
+                }
             }
             else if (score >= 60)
             {
