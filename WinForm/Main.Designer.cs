@@ -139,7 +139,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 79);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(280, 383);
+            this.panel2.Size = new System.Drawing.Size(284, 348);
             this.panel2.TabIndex = 1;
             // 
             // txtCalculations
@@ -151,17 +151,17 @@
             this.txtCalculations.Multiline = true;
             this.txtCalculations.Name = "txtCalculations";
             this.txtCalculations.ReadOnly = true;
-            this.txtCalculations.Size = new System.Drawing.Size(154, 383);
+            this.txtCalculations.Size = new System.Drawing.Size(158, 348);
             this.txtCalculations.TabIndex = 1;
             // 
             // txtUserAnswers
             // 
             this.txtUserAnswers.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtUserAnswers.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtUserAnswers.Location = new System.Drawing.Point(154, 0);
+            this.txtUserAnswers.Location = new System.Drawing.Point(158, 0);
             this.txtUserAnswers.Multiline = true;
             this.txtUserAnswers.Name = "txtUserAnswers";
-            this.txtUserAnswers.Size = new System.Drawing.Size(69, 383);
+            this.txtUserAnswers.Size = new System.Drawing.Size(69, 348);
             this.txtUserAnswers.TabIndex = 2;
             this.txtUserAnswers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserAnswers_KeyPress);
             this.txtUserAnswers.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUserAnswers_KeyUp);
@@ -171,11 +171,11 @@
             this.txtAnswers.BackColor = System.Drawing.SystemColors.Control;
             this.txtAnswers.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtAnswers.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtAnswers.Location = new System.Drawing.Point(223, 0);
+            this.txtAnswers.Location = new System.Drawing.Point(227, 0);
             this.txtAnswers.Multiline = true;
             this.txtAnswers.Name = "txtAnswers";
             this.txtAnswers.ReadOnly = true;
-            this.txtAnswers.Size = new System.Drawing.Size(57, 383);
+            this.txtAnswers.Size = new System.Drawing.Size(57, 348);
             this.txtAnswers.TabIndex = 3;
             // 
             // panel3
@@ -184,9 +184,9 @@
             this.panel3.Controls.Add(this.btnGenerate);
             this.panel3.Controls.Add(this.btnSeeAnswers);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(280, 79);
+            this.panel3.Location = new System.Drawing.Point(284, 79);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(204, 383);
+            this.panel3.Size = new System.Drawing.Size(200, 348);
             this.panel3.TabIndex = 2;
             // 
             // lblScore
@@ -194,7 +194,7 @@
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblScore.Location = new System.Drawing.Point(13, 198);
+            this.lblScore.Location = new System.Drawing.Point(13, 203);
             this.lblScore.MaximumSize = new System.Drawing.Size(180, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(169, 60);
@@ -227,12 +227,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 462);
+            this.ClientSize = new System.Drawing.Size(484, 427);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "出题计算";
