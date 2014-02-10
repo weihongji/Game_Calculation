@@ -159,14 +159,7 @@ namespace Calculation
             Color color;
             if (score >= 80)
             {
-                if (GetNumberFromConfig("background", 19) == 24)
-                {
-                    color = Color.White;
-                }
-                else
-                {
-                    color = Color.Green;
-                }
+                color = Color.Green;
             }
             else if (score >= 60)
             {
@@ -175,6 +168,10 @@ namespace Calculation
             else
             {
                 color = Color.Red;
+            }
+            if (GetNumberFromConfig("background", 19) == 24)
+            {
+                color = Color.White;
             }
             this.lblScore.Text = string.Format("你得了{0}分，{1}{2}", score, Environment.NewLine, comment);
             this.lblScore.ForeColor = color;
@@ -188,28 +185,33 @@ namespace Calculation
 
         private void txtUserAnswers_KeyPress(object sender, KeyPressEventArgs e)
         {
+            var handled = false;
             if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
             {
                 if (e.KeyChar == '\r' || e.KeyChar == '\n')
                 {
-                    btnSeeAnswers_Click(null, null);
-                    e.Handled = true;
-                    return;
+                    handled = true;
                 }
             }
-            // Enter at the last answer
-            if (e.KeyChar == '\r' || e.KeyChar == '\n')
+            if (!handled)
             {
-                var enterCount = this.txtUserAnswers.Text.Count(x => x == '\n');
-                if (enterCount == this.COUNT - 1)
+                // Enter at the last answer
+                if (e.KeyChar == '\r' || e.KeyChar == '\n')
                 {
-                    if (this.txtUserAnswers.Text.LastIndexOf('\n') < this.txtUserAnswers.SelectionStart)
+                    var enterCount = this.txtUserAnswers.Text.Count(x => x == '\n');
+                    if (enterCount == this.COUNT - 1)
                     {
-                        btnSeeAnswers_Click(null, null);
-                        e.Handled = true;
-                        return;
+                        if (this.txtUserAnswers.Text.LastIndexOf('\n') < this.txtUserAnswers.SelectionStart)
+                        {
+                            handled = true;
+                        }
                     }
                 }
+            }
+            if (handled)
+            {
+                btnSeeAnswers_Click(null, null);
+                e.Handled = true;
             }
         }
 
