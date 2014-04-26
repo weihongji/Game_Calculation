@@ -11,8 +11,6 @@ namespace Calculation
         public int Bottom { get; set; }
         public int Top { get; set; }
 
-        private const double ZERO = 0.2;
-
         public Generator()
             : this(1, 100)
         {
@@ -38,24 +36,17 @@ namespace Calculation
             int i = 0;
             while (i < count)
             {
-                var result = (int)(random.NextDouble() * range);
-                var left = random.Next(bottom, result);
+                var result = bottom + (int)(random.NextDouble() * range);
+                var left = random.Next(0, result);
                 var calculation = new Calculation()
                 {
                     Operation = Operation.Addition,
                     Left = left,
                     Right = result - left
                 };
-                if (calculation.Left == 0 && calculation.Right == 0)
-                {
-                    continue;
-                }
                 if (calculation.Left == 0 || calculation.Right == 0)
                 {
-                    if (additions.Count(x => x.Left == 0 || x.Right == 0) >= ZERO * count)
-                    {
-                        continue;
-                    }
+                    continue;
                 }
                 var s = calculation.ToString();
                 if (additions.All(x => x.ToString() != s))
@@ -80,24 +71,17 @@ namespace Calculation
             int i = 0;
             while (i < count)
             {
-                var left = (int)(random.NextDouble() * range);
-                var right = random.Next(bottom, left);
+                var left = bottom + (int)(random.NextDouble() * range);
+                var right = random.Next(0, left);
                 var calculation = new Calculation()
                 {
                     Operation = Operation.Subtraction,
                     Left = left,
                     Right = right
                 };
-                if (calculation.Left == 0 && calculation.Right == 0)
-                {
-                    continue;
-                }
                 if (calculation.Left == 0 || calculation.Right == 0)
                 {
-                    if (subtractions.Count(x => x.Left == 0 || x.Right == 0) >= ZERO * count)
-                    {
-                        continue;
-                    }
+                    continue;
                 }
                 var s = calculation.ToString();
                 if (subtractions.All(x => x.ToString() != s))
